@@ -13,7 +13,9 @@ struct FilterChip: View {
     let action: () -> Void
 
     var body: some View {
-        Button(action: action) {
+        Button {
+            action()
+        } label: {
             Text(title)
                 .font(Theme.callout)
                 .foregroundStyle(isSelected ? .white : Theme.primaryText)

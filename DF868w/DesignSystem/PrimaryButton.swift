@@ -19,7 +19,9 @@ struct PrimaryButton: View {
     }
 
     var body: some View {
-        Button(action: action) {
+        Button {
+            action()
+        } label: {
             HStack(spacing: Theme.spacingS) {
                 if let icon {
                     Image(systemName: icon)
@@ -52,7 +54,9 @@ struct SecondaryButton: View {
     }
 
     var body: some View {
-        Button(action: action) {
+        Button {
+            action()
+        } label: {
             HStack(spacing: Theme.spacingS) {
                 if let icon {
                     Image(systemName: icon)
