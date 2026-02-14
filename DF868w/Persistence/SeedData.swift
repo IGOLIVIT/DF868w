@@ -93,6 +93,7 @@ enum SeedData {
         try? context.save()
     }
 
+    @MainActor
     static func seedPreview(into container: ModelContainer) {
         let context = container.mainContext
         seedDefaults(context: context)

@@ -28,6 +28,7 @@ extension ModelContainer {
         return try ModelContainer(for: schema, configurations: [config])
     }
 
+    @MainActor
     static var preview: ModelContainer {
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try! ModelContainer(for: Schema([
